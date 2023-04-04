@@ -25,12 +25,7 @@
 
 		</div>
 		<div class="navigation_commande">
-			<nav>
-				<ul>
-					<li> <a href="#">Nous rencontrer</a>  </li>
-					<li><a href="#">Admin</a></li>
-				</ul>
-			</nav>
+			<nav><?php wp_nav_menu()?> </nav>
 			<button>
 				Commander
 </button>
