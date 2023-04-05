@@ -94,8 +94,6 @@
 
 /* FORMULAIRE */
 
-
-
 #form-info label{
     color: white;
     font-family: 'syne';
@@ -107,3 +105,76 @@
     height: 71px;
     
 }
+
+#form-info button{
+    display: none;
+}
+
+/* Quantité */
+
+.quantite{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.quantite_choix{
+    display: flex;
+    width: 85px;
+    background-color: #ffff;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.quantite_choix input{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    margin: 0;
+    text-align: center;
+
+}
+
+.quantite_choix .plus_moins{
+    display: flex;
+    flex-direction: column;
+}
+
+.quantite_choix .plus{
+    width: 31px;
+    height: 25px;
+    border: none;
+    color: white;
+    border-bottom: solid 3px #ffff;
+    border-radius: 0 10px 0 0;
+    background-color: #DC9F96;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quantite_choix .moins{
+    width: 31px;
+    height: 25px;
+    border: none;
+    color: white;
+    border-radius: 0 0 10px 0;
+    background-color: #DC9F96;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantite .commande button{
+    width: 100px;
+    height: 50px;
+    background-color: #e0b9b4;
+    color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    margin-left: 30px;
+}
+

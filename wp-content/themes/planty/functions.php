@@ -7,4 +7,54 @@ function theme_enqueue_styles()
     wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/css/theme.css'));
 }
 
+
+
+
+/* SHORTCODES */
+
+function afficherTexte(){
+    $quantite ='
+        <div class="quantite">
+            <div class="quantite_choix">
+                <input class="nombre" value="0" min="0">
+                <div class="plus_moins">
+                    <button class="plus"> + </button>
+                    <button class="moins"> - </button>
+                </div>
+            </div>
+            <div class="commande">
+                <button> OK </button>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            
+            let quantite = document.querySelector(".nombre");
+            let ajout = document.querySelector(".plus");
+            let suppr = document.querySelector(".moins");
+
+            console.log(quantite.value);
+
+            ajout.addEventListener("click", ()=>{
+                    quantite.value++
+            });
+
+            suppr.addEventListener("click", ()=>{
+                if(quantite.value > 0){
+                    quantite.value--
+                }else{
+                    quantite.value = 0
+                }
+            });
+
+
+        </script>
+    ';
+  
+
+    return $quantite;
+}
+
+add_shortcode('preco', 'afficherTexte')
+
 ?>
