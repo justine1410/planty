@@ -1,3 +1,7 @@
+	
+
+
+
 <?php
 /**
  * The Header for our theme.
@@ -7,7 +11,7 @@
 
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
@@ -15,8 +19,9 @@
 	<?php wp_head(); ?>
 </head>
 
-<body >
-	<header class="header">
+<body <?php body_class(); ?>>
+
+	<header class="header" >
 		<div class="logo">
 			<a href="#">
 				<img src="http://localhost/planty/wp-content/uploads/2023/04/Logo-2.png" alt="Logo_planty">
@@ -26,12 +31,16 @@
 		</div>
 		<div class="navigation_commande">
 			<nav><?php wp_nav_menu()?> </nav>
-			<button>
+			<a href="http://localhost/planty/commander" class="button">
 				Commander
-</button>
+			</a>
 		</div>
 	</header>
 
-</body>			
+
+
+
+
+
 
 
