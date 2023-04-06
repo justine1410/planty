@@ -55,6 +55,25 @@ function afficherTexte(){
     return $quantite;
 }
 
-add_shortcode('preco', 'afficherTexte')
+add_shortcode('preco', 'afficherTexte');
+
+
+
+/* HOOK FILTER UTILISER POUR MODIFIER L'AFFICHAGE D4UN ELEMENT*/
+
+
+function is_user_logged($items){
+    if(is_user_logged_in()){
+        
+       $items .= '<li> <a href="#">Admin </a></li>';
+    }
+    return $items;
+}
+
+
+
+add_filter('wp_nav_menu_items','is_user_logged');
+
 
 ?>
+
