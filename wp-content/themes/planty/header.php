@@ -29,7 +29,10 @@
 			<p>energy drink</p>
 
 		</div>
+		<label for="toggle" class="menu-responsive">☰</label>
+        <input type="checkbox" id="toggle">
 		<div class="navigation_commande">
+
 			<nav><?php wp_nav_menu()?> </nav>
 			<a href="http://localhost/planty/commander" class="button">
 				Commander

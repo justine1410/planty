@@ -1,5 +1,4 @@
 
-
 /* HEADER */
 .header{
     background-color: #f1f1f1 !important;
@@ -13,6 +12,10 @@
 
 .header a:hover{    
     color: #C02E44 !important;
+}
+
+.header a:focus{
+	outline:unset!important;
 }
 .logo{
     width: 30%;
@@ -64,6 +67,12 @@
 
 }
 
+.menu-responsive, #toggle{
+    display: none;
+ }
+
+
+
 @media (max-width: 800px) {
     .header{
         padding: 20px 0 20px 0;
@@ -71,19 +80,44 @@
     }
     
     .header .logo{
-        width: 100%;
+        width: 80%;
         justify-content: center;
     }
 
+    .menu-responsive {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: Black;
+        font-size: 35px;
+    }
+    #toggle:checked + .navigation_commande {
+        display: flex;
+    }
+
     .navigation_commande{
-        width: 50%;
+        display: none;
+        width: 100%;
         flex-direction: column;
         align-items: center;
     }
 
-    
+    .navigation_commande nav{
+        width: 100%;
+    }
+
+    .navigation_commande ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navigation_commande .button{
+        width: 50%;
+        justify-content: center;
+    }
     }
     
+
 
 /* FOOTER */
 #site-footer{
@@ -92,22 +126,158 @@
     padding: 10px 0 10px 0;
 }
 
-/* FORMULAIRE */
 
-#form-info label{
+/* FORMULAIRE RENCONTRE */
+
+.formRencontre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formRencontre input[type=submit] {
+    background-color: #DC9F96;
+    border: none;
+    border-radius: 4px;
+    width: 198px;
+    height: 55px;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+.formRencontre input[type=submit]:hover{
+    background-color: #c02e44;
+}
+
+.formInfoRencontre{
+    display: flex;
+}
+
+.formInfoRencontre h3{
+    font-family: 'syne';
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.formInfoRencontre label{
+    font-family: 'syne';
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.formInfoRencontre input, .formInfoRencontre textarea{
+    width: 380px;
+    height: 71px;
+    background-color: #ffffff !important;
+}
+.formRencontre .bouton, .form .bouton{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+@media screen and (min-width:300px) and (max-width:750px) {
+    .formRencontre{
+        width: 100%;
+    }
+
+    .formInfoRencontre{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .formInfoRencontre .info{
+        width: 100%;
+    }
+    .formInfoRencontre .info input, .formInfoRencontre .info textarea{
+        width: 100%;
+    }
+
+    .formRencontre .bouton, .formInfo .bouton{
+        width: 50%;
+    }
+    
+}
+
+
+/* FORMULAIRE PRECO */
+
+.form .wpcf7-spinner{
+    display: none;
+}
+
+.form input[type=submit] {
+    background-color: #DC9F96;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    width: 198px;
+    height: 55px;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+.form input[type=submit]:hover{
+    background-color: #c02e44;
+}
+
+.formInfo{
+    display: flex;
+    justify-content: center;
+
+}
+
+.formInfo h3{
+    color:#ffffff;
+    font-family: 'syne';
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.formInfo label{
     color: white;
     font-family: 'syne';
     font-size: 20px;
     font-weight: 400;
 }
-#form-info input{
-    
+
+.formInfo input{
+    width: 380px;
     height: 71px;
-    
+    background-color: #ffffff !important;
 }
 
-#form-info button{
-    display: none;
+.formInfo .livraison{
+    width: 50%;
+    padding-left: 20px;
+}
+
+.formInfo .info{
+    width: 50%;
+    border-right: solid 1px #ffffff;
+    padding-right: 20px;
+}
+
+@media screen and (min-width:750px) and (max-width:1024px) {
+    .formInfo .livraison, .formInfo .info{
+        width: initial;
+    }
+}
+
+@media screen and (min-width:300px) and (max-width:750px) {
+    .formInfo{
+        flex-direction: column;
+    }
+
+    .formInfo .info, .formInfo .livraison{
+        width: 100%;
+        padding: 10px;
+    }
 }
 
 /* Quantité */
@@ -136,33 +306,28 @@
 
 }
 
-.quantite_choix .plus_moins{
+.plus_moins{
     display: flex;
     flex-direction: column;
 }
 
-.quantite_choix .plus{
+.plus, .moins{
     width: 31px;
     height: 25px;
     border: none;
     color: white;
-    border-bottom: solid 3px #ffff;
-    border-radius: 0 10px 0 0;
     background-color: #DC9F96;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.quantite_choix .moins{
-    width: 31px;
-    height: 25px;
-    border: none;
-    color: white;
+
+.plus{
+    border-radius: 0 10px 0 0;
+    border-bottom: solid 3px #ffff;
+}
+.moins{
     border-radius: 0 0 10px 0;
-    background-color: #DC9F96;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .quantite .commande button{
@@ -177,4 +342,9 @@
     border: none;
     margin-left: 30px;
 }
+
+
+
+
+
 
