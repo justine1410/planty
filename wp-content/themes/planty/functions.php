@@ -9,8 +9,6 @@ function theme_enqueue_styles()
 }
 
 
-
-
 /* SHORTCODES */
 
 function afficherFraise(){

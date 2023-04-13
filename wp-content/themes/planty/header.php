@@ -23,7 +23,7 @@
 
 	<header class="header" >
 		<div class="logo">
-			<a href="#">
+			<a href="http://localhost/planty/">
 				<img src="http://localhost/planty/wp-content/uploads/2023/04/Logo-2.png" alt="Logo_planty">
 			</a>
 			<p>energy drink</p>
